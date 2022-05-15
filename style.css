@@ -1,0 +1,195 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+main{
+    background-color: rgb(144, 167, 185);
+}
+
+nav{
+    position: relative;
+    height: 36px;
+    display: flex;
+    justify-content: flex-end;
+    border: 2px solid rgb(81, 131, 172);
+    background-color:rgb(81, 131, 172);
+    border-bottom: 2px rgb(138, 137, 137);
+}
+nav a{
+    text-decoration: none;
+    font-size: calc(1vw + 6px);
+    text-align: center;
+    line-height: 36px;
+    color: white;
+    margin-right: 40px; 
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+}
+.enlaces{
+    display: none;
+}
+.hamburguesa{
+    display: flex;
+    flex-direction: column;
+    width: 28px;
+    height: 28px;
+    border: 3px solid rgb(81, 131, 172);
+    border-radius: 3px;
+    background-color: rgb(81, 131, 172);
+}
+.burger{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 3px solid rgb(81, 131, 172);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+picture{
+    position: relative;
+}
+.lyrics{
+    display: flex;
+    flex-direction: column;
+    /* height: -236px; */
+}
+.otra{
+
+    display: flex;
+    flex-direction: column-reverse;
+    height: 230px;
+}
+.portada h1{
+    font-size: calc(4vw + 1.2em);
+    position: absolute;
+    top: calc(26vh + 2px);
+    right: calc(8vw + 10px);
+    color: rgb(34, 126, 201);
+    text-shadow: 2px 2px black;
+}
+img{
+    width: 100%;
+    vertical-align: top;
+}
+.imagen img{
+    border:  2px solid rgba(81, 131, 172,0.4);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.imagen img:hover{
+    border:  2px solid rgba(246, 241, 241, 0.5);
+}
+section h1{
+    font-size: 1.2em;
+    margin: 10px 15px 2px;
+}
+.titulo{
+    font-size: calc(3vw + 8px);
+    font-size: .9em;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+.bloque{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    padding: 8px;
+}
+.enlacesjs{
+    position: absolute;
+    top: 36px;
+    right: -42px;
+    display: flex;
+    background-color: rgb(85, 174, 247);
+    flex-direction: column;
+    z-index: 1;
+    width: 200px;
+}
+.bloque a{
+    text-decoration: none;
+    color: black;
+} 
+.boton{
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border:  2px solid rgb(207, 205, 205); 
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(81, 131, 172);
+}
+.boton:hover{
+    cursor: pointer;
+    background-color: rgb(144, 167, 185);
+    color: black;
+}
+iframe{
+    display: none;
+    width: 100%;
+}
+.contacto{
+    font-size: 1.2em;
+    background-color:rgb(181, 183, 184);
+    padding: 2px 0px 10px;
+    border-bottom: 1px solid black;
+}
+
+footer{
+    height: calc(40vh + 200px);
+    background-color:rgb(181, 183, 184);
+}
+footer h2{
+    font-size: calc(1.2vw + 12px);
+    padding: 10px 20px;
+    color: black;
+}
+footer p{
+    font-size: calc(1.2vw + 8px);
+    padding: 20px 20px 10px;
+    color: black;
+    border-bottom: 1px solid black;
+}
+@media only screen and (min-width:590px){
+    .portada h1{
+        font-size: calc(4vw + 1.2em);
+        top: calc(35vh + 20px);
+        right: calc(10vw + 10px);
+        
+    }
+    .hamburguesa{
+        display: none;
+    }
+    .enlaces{
+       display: flex;
+       display: contents;
+       width: 175px;
+       height: 36px;
+       margin-right: 50px;
+    }
+    nav a{
+        margin-right: 50px; 
+        border-top: none;
+    }
+    
+}
+@media only screen and (min-width:770px){
+    .portada h1{
+        font-size: calc(4vw + 1.2em);
+        top: calc(45vh + 30px);
+        right: calc(16vw + 30px);
+    }
+    .bloque{
+        grid-column-gap: 15px;
+        grid-row-gap: 10px;
+        padding: 10px;
+    }
+    
+}
+
